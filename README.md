@@ -15,7 +15,7 @@ SecureSnaps is a simple web application that enables users to sign up, log in, a
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/SecureSnaps.git
+   git clone https://github.com/Deeksha0301/SecureSnaps
    ```
 
 2. **Navigate to the project directory:**
