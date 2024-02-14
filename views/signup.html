@@ -1,0 +1,24 @@
+<!-- views/signup.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Signup</title>
+</head>
+<body>
+  <div class="container">
+    <h2>Signup</h2>
+    <form action="/auth/signup" method="POST">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <button type="submit">Signup</button>
+    </form>
+    <p>Already have an account? <a href="/auth/login">Login here</a>.</p>
+  </div>
+</body>
+</html>

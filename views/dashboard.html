@@ -1,0 +1,36 @@
+<!-- views/dashboard.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Dashboard</title>
+</head>
+<body>
+  <div class="container">
+    <% if (user) { %>
+      <h2>Welcome, <%= user.username %>!</h2>
+      <form action="/upload/upload" method="POST" enctype="multipart/form-data">
+        <div class="upload-section">
+          <label for="image">Choose an image:</label>
+          <input type="file" id="image" name="image" accept="image/*" required>
+          <button type="submit">Upload Image</button>
+        </div>
+      </form>
+      <div class="uploaded-images">
+        <h3>Your Uploaded Images:</h3>
+        <div class="image-container">
+          <% files.forEach((file) => { %>
+            <img loading="lazy" src="/uploads/<%= file %>" alt="<%= file %>">
+          <% }); %>
+        </div>
+      </div>
+      <a class="logout" href="/auth/logout">Logout</a>
+    <% } else { %>
+      <p>You are not logged in. <a href="/auth/login">Login</a> or <a href="/auth/signup">Signup</a>.</p>
+    <% } %>
+  </div>
+</body>
+</html>
