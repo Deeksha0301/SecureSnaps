@@ -1,6 +1,4 @@
-Certainly! Here's the corrected version of the README with the project name "SecureSnaps":
 
-```markdown
 # SecureSnaps
 
 SecureSnaps is a simple web application that enables users to sign up, log in, and securely upload images. The application implements basic authentication and authorization mechanisms to ensure the protection of user data.
